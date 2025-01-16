@@ -1,0 +1,94 @@
+# Document Templates Repository
+
+Welcome to the **Document Templates Repository**! This repository is designed to house customizable document templates for various professional and personal use cases. Each template is designed with flexibility in mind, using Python's string formatting for dynamic content population.
+
+---
+
+## 📋 Features
+- **Ready-to-use Templates**: Includes a variety of document templates such as employment certificates, invoices, and reports.
+- **Dynamic Content Filling**: Templates are integrated with Python's `str.format()` for easy automation.
+- **Professional Layouts**: Designed to be clean, professional, and versatile.
+- **Markdown & Exportable Formats**: Templates are provided in Markdown and can be exported to PDF, Word, or other formats.
+
+---
+
+## 📁 Repository Structure
+```
+/templates
+    /employment
+        - employment_certificate.md
+    ...
+    /personal
+        - personal_resume.md
+/scripts
+    - fill_template.py
+README.md
+```
+
+- **/templates**: Contains all the document templates grouped by category.
+- **/scripts**: Contains Python scripts for dynamically filling in templates.
+- **README.md**: The file you’re reading now, which provides an overview of the repository.
+
+---
+
+## 🚀 How to Use
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/document-templates.git
+   cd document-templates
+   ```
+2. Open a template from the `/templates` folder.
+3. Use the provided Python script (`/scripts/fill_template.py`) to fill in the required fields dynamically:
+   ```bash
+   python fill_template.py --template /templates/employment/employment_certificate.md --output /output/employment_certificate_filled.md
+   ```
+
+---
+
+## 📄 Example: Employment Certificate
+Below is an example of using a template dynamically:
+
+### Template: `/templates/employment/employment_certificate.md`
+```markdown
+# 在職証明書
+
+下記の者は、当社に在籍していることを証明します。
+
+**現住所:** {address}  
+**氏名:** {name}  
+**生年月日:** {birth_year}年 {birth_month}月 {birth_day}日生  
+...
+```
+
+### Python Script Usage
+```python
+data = {
+    "address": "東京都渋谷区xxx",
+    "name": "山田 太郎",
+    "birth_year": 1985,
+    ...
+}
+template = open("templates/employment/employment_certificate.md").read()
+filled = template.replace('｛','{').replace('｝','}').format(**data)
+print(filled)
+```
+
+---
+
+## 🛠 Requirements
+- Python 3.7+
+- Libraries: None required (built-in string formatting)
+
+---
+
+## 📜 License
+This repository is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📧 Contact
+If you have any questions or suggestions, feel free to contact us
+
+---
+
+Happy documenting! 😊
