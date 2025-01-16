@@ -1,0 +1,2 @@
+yarn add md-to-pdf
+npx md-to-pdf ..\templates\employment\employment_certificate.md --stylesheet style.css
