@@ -67,11 +67,11 @@ const config = {
     ({
       // Replace with your project's social card
       // image: 'img/docusaurus-social-card.jpg',
-      // docs: {
-      //   sidebar: {
-      //     hideable: true,
-      //   },
-      // },
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
       navbar: {
         // title: 'My Site',
         // logo: {
